@@ -1,0 +1,202 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial;
+}
+html {
+	font-size: 62.5%;
+}
+:root {
+	--theme-color: #56baed;
+	--theme-color2: #fff;
+}
+body {
+	background-color: var(--theme-color);
+}
+.select__box,
+.play__board,
+.result__box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.3s ease;
+}
+.select__box {
+	background: var(--theme-color2);
+	padding: 2rem 2.5rem 2.5rem;
+	border-radius: 0.5rem;
+	max-width: 33rem;
+	width: 100%;
+	transition: all 0.3s ease;
+}
+.hidden {
+	opacity: 0;
+	pointer-events: none;
+	transform: translate(-50%, -50%) scale(0.9);
+}
+.select__box header {
+	font-size: 2.3rem;
+	font-weight: 600;
+	padding-bottom: 10px;
+	border-bottom: 0.1rem solid #ccc;
+}
+.select__box .title {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin: 2rem 0;
+}
+.select__box .options {
+	display: flex;
+	width: 100%;
+}
+.options button {
+	width: 100%;
+	font-size: 1.8rem;
+	font-weight: 500;
+	padding: 0.8rem 0;
+	border: none;
+	outline: none;
+	background: var(--theme-color);
+	border-radius: 0.5rem;
+	color: var(--theme-color2);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.options button:hover,
+.result__box .btn:hover {
+	transform: scale(0.96);
+}
+.options button.playerX {
+	margin-right: 0.5rem;
+}
+.options button.playerO {
+	margin-left: 0.5rem;
+}
+.play__board {
+	opacity: 0;
+	pointer-events: none;
+	transform: translate(-50%, -50%) scale(0.9);
+}
+.show {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translate(-50%, -50%) scale(1);
+}
+.play__board .details .players {
+	display: flex;
+	width: 100%;
+	position: relative;
+	justify-content: space-between;
+}
+.play__board .details span {
+	width: 10rem;
+	border-radius: 0.5rem;
+	padding: 0.7rem 0;
+	font-size: 1.9rem;
+	font-weight: 500;
+	cursor: default;
+	width: 100%;
+	text-align: center;
+	color: var(--theme-color);
+	position: relative;
+	z-index: 5;
+    transition: all 0.3s ease;
+}
+.details span:first-child {
+	color: var(--theme-color2);
+}
+.details .slider {
+	background-color: var(--theme-color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 50%;
+	border-radius: 0.5rem;
+	z-index: 2;
+    transition: all 0.3s ease;
+}
+.players.active span:first-child {
+	color: var(--theme-color);
+}
+.players.active span:nth-child(2) {
+	color: var(--theme-color2);
+}
+.players.active .slider {
+	left: 50%;
+}
+.play__board .details {
+	background: var(--theme-color2);
+	padding: 0.7rem;
+	border-radius: 0.5rem;
+}
+.play__board .play__area {
+	margin-top: 0.2rem;
+}
+.play__board section {
+	display: flex;
+}
+.play__board section span {
+	display: block;
+	margin: 0.2rem;
+	height: 8rem;
+	width: 8rem;
+	background-color: var(--theme-color2);
+	border-radius: 0.5rem;
+	font-size: 4rem;
+	text-align: center;
+	line-height: 80px;
+	color: var(--theme-color);
+}
+.result__box {
+	background: var(--theme-color2);
+	padding: 2rem;
+	border-radius: 0.5rem;
+	max-width: 35rem;
+	width: 100%;
+}
+.result__box .result__text {
+	font-size: 2.5rem;
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.result__box .result__text p {
+	font-weight: 600;
+	margin: 0 0.5rem;
+	text-transform: capitalize;
+}
+.result__box .btn {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+.result__box .btn button {
+	font-size: 1.8rem;
+	font-weight: 500;
+	padding: 0.8rem 2rem;
+	border: none;
+	outline: none;
+	background: var(--theme-color);
+	border-radius: 0.5rem;
+	color: var(--theme-color2);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+footer{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    width: 80%;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--theme-color2);
+}
+footer a{
+    text-decoration: none;
+    color: var(--theme-color2);
+}

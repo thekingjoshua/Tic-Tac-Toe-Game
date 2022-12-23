@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tic-Tac-Toe Game</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+	</head>
+	<body>
+		<!-- Select Player Box -->
+		<div class="select__box">
+			<header>Tic Tac Toe Game</header>
+			<div class="content">
+				<div class="title">Select Player</div>
+				<div class="options">
+					<button class="playerX">Player X</button>
+					<button class="playerO player">Player O</button>
+				</div>
+			</div>
+		</div>
+		<!-- Game Section -->
+		<div class="play__board">
+			<div class="details">
+				<div class="players">
+					<span class="Xturn">X's Turn</span>
+					<span class="Oturn">O's Turn</span>
+					<div class="slider"></div>
+				</div>
+			</div>
+			<div class="play__area">
+				<section>
+					<span class="box1"></span>
+					<span class="box2"></span>
+					<span class="box3"></span>
+				</section>
+				<section>
+					<span class="box4"></span>
+					<span class="box5"></span>
+					<span class="box6"></span>
+				</section>
+				<section>
+					<span class="box7"></span>
+					<span class="box8"></span>
+					<span class="box9"></span>
+				</section>
+			</div>
+		</div>
+		<div class="result__box hidden">
+			<div class="result__text"></div>
+			<div class="btn">
+				<button class="replay__btn">Replay</button>
+			</div>
+		</div>
+		<footer>Built with &hearts; by <a href="kingjoshua.netlify.app">KingJoshua</a></footer>
+		<script src="app.js"></script>
+	</body>
+</html>
